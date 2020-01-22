@@ -75,6 +75,7 @@ if (isset($data['addition']))
 
 		            <?php endwhile;?>
    
+   хуита
    
         </select>
         <div id='Label1' style='display: none;'>
