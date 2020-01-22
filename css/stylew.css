@@ -1,0 +1,67 @@
+
+table {
+border-spacing: 0 10px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+}
+
+thead th:first-child{
+	width: 10%;	
+
+}
+thead th:nth-child(2) {
+		width: 20%;	
+	}
+thead th:nth-child(3) {
+		width: 4%;	
+
+}
+thead th:nth-child(4) {
+		width: 12%;	
+}
+thead th:nth-child(5) {
+		width: 7%;	
+}
+th {
+height: 10%;	
+padding: 10px 20px;
+background: #56433D;
+color: #F9C941;
+border-right: 2px solid #56433D; 
+font-size: 0.9em;
+width: 100px;	
+}
+
+td {
+width: 260px;	
+font-size: 14px;
+text-align: center;
+border:2px solid #56433D;
+}
+td:first-child {
+font-size: 13px;	
+}
+
+
+input{
+	 border-radius: 4px;
+}
+select{
+	width: 100px;
+	 border-radius: 4px;
+}
+textarea{
+			 border-radius: 4px;
+}
+ input:first-child{
+
+	width: 200px;	
+}
+
+
+
+
+body{
+
+	background-color: white;
+}
