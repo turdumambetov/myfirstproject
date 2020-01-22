@@ -74,7 +74,8 @@ if (isset($data['addition']))
 		            <option value="<?php echo $row1[1];?>"><?php echo $row1[0];?></option>
 
 		            <?php endwhile;?>
-
+   
+   
         </select>
         <div id='Label1' style='display: none;'>
 	<select type="text" name="act" >				 
@@ -86,14 +87,6 @@ if (isset($data['addition']))
   			</select> </td></tr>
 
 </div>
-
-
-
-
-
-
-
-
 <div id='Label2' style='display: none;'>
 	.............
 </div>
