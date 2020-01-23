@@ -9,12 +9,13 @@
 <body>
 
 <?php
-if (isset($_POST['search'])) {
+if (!isset($_POST['search'])) {
     $poisk = $_POST['poisk'];
-    $query = "SELECT * FROM `visit` WHERE CONCAT(`name`) LIKE '%" . $poisk . "%'";
+    $query = "SELECT * FROM `visit1` WHERE `name` LIKE '%" . $poisk . "%'";
     $search_result = filterTable($query);
 }
 else {
+	
   $search_result = filterTable($query);
 }
  
@@ -35,6 +36,7 @@ function filterTable($query)
 			  <th>Дата</th>
 			  <th>Телефон</th>
 			  <th>Диагноз</th>
+			  <th>действие</th>
 			  <th>Оплата</th>
 			  <th>Описание</th>
 			</tr>
@@ -47,6 +49,15 @@ function filterTable($query)
 			echo '<td>' . $row['date'] . '</td>';
 			echo '<td>' . $row['phone_number'] . '</td>';
 			echo '<td>' . $row['diagnoz'] . '</td>';
+			if($row['act'] == 'удален'){
+			echo '<td style="color:red;">' . $row['act'] . '</td>';	
+			}
+			elseif($row['act'] == 'поставлен'){
+			echo '<td style="color:blue;">' . $row['act'] . '</td>';	
+			}
+			else{
+				echo '<td>' . $row['act'] . '</td>';	
+			}	
 			echo '<td>' . $row['oplata'] .' сом' . '</td>';
 			echo '<td>' . $row['text'] . '</td>';
 			echo '</tr>';
