@@ -16,6 +16,7 @@ if (!isset($_POST['search'])) {
 }
 else {
 	
+	
   $search_result = filterTable($query);
 }
  
