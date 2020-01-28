@@ -69,12 +69,14 @@ function filterTable($query)
 
 
     <div align="center">
-        <fieldset align="center">
-            <input align="center" type="search" placeholder="Поиск" name="poisk"?>
- 
+        <fieldset align="">  
+         
+            <input  type="search" placeholder="Поиск" name="poisk"?>
             <button   name="search" method="POST" type="submit">Найти</button>
- 
+        
+ 		<a href="/index.php">Главная</a>
         </fieldset>
+    
     </div>
     </div>
 </form>
