@@ -18,6 +18,9 @@ thead th:nth-child(4) {
 thead th:nth-child(5) {
 		width: 7%;	
 }
+thead th:nth-child(6) {
+		width: 7%;	
+}
 th {
 padding: 10px 20px;
 background: #56433D;

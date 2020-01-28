@@ -3,18 +3,15 @@
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-	<title>
-		Стомотология
-	</title>
-</head>
-<body>
-<center>
-<a href="/write.php" > добавление</a><br>
-<a href="/output.php" > вывод</a><br>
-<a href="/findout.php" > поиск</a><br>
-
-</center>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>индекс</title>
+    <link rel="stylesheet" href="css/styleindex.css">
+  </head>
+  <body>
+    <ul class="main-menu">
+      <li><a href="/write.php">Добавить запись</a></li>
+      <li><a href="/findout.php">Поиск запися</a></li>    </ul>
+  </body>
 </html>

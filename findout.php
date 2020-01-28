@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
 
@@ -8,15 +8,14 @@
 </head>
 <body>
 
+
 <?php
-if (!isset($_POST['search'])) {
+if (isset($_POST['search'])) {
     $poisk = $_POST['poisk'];
-    $query = "SELECT * FROM `visit1` WHERE `name` LIKE '%" . $poisk . "%'";
+    $query = "SELECT * FROM `visit1` WHERE CONCAT(`name`) LIKE '%" . $poisk . "%'";
     $search_result = filterTable($query);
 }
 else {
-	
-	
   $search_result = filterTable($query);
 }
  
@@ -71,7 +70,7 @@ function filterTable($query)
 
     <div align="center">
         <fieldset align="center">
-            <input align="center" type="search" placeholder="Поиск" name="poisk"?>>
+            <input align="center" type="search" placeholder="Поиск" name="poisk"?>
  
             <button   name="search" method="POST" type="submit">Найти</button>
  
