@@ -15,10 +15,7 @@ if (isset($_POST['search'])) {
     $query = "SELECT * FROM `visit1` WHERE CONCAT(`name`) LIKE '%" . $poisk . "%'";
     $search_result = filterTable($query);
 }
-else {
-  $search_result = filterTable($query);
-}
- 
+
 function filterTable($query)
 {
     $connect = mysqli_connect("localhost", "root", "", "stomotologia");
@@ -43,7 +40,12 @@ function filterTable($query)
 		</thead>
 	<tbody>	
 	<tr>	
-		 <?php while ($row = mysqli_fetch_array($search_result)):
+		 <?php 
+		 if (empty($search_result)) {
+
+	}
+	else{
+		 while($row = mysqli_fetch_array($search_result)):
 		    echo '<tr>';
 			echo '<td>' . $row['name'] . '</td>';
 			echo '<td>' . $row['date'] . '</td>';
@@ -62,13 +64,13 @@ function filterTable($query)
 			echo '<td>' . $row['text'] . '</td>';
 			echo '</tr>';
 
-		  endwhile; 
+		  endwhile; }
 		?> 
 	</tr>
 </tbody>
 
 
-    <div align="center">
+    <div align="right">
         <fieldset align="">  
          
             <input  type="search" placeholder="Поиск" name="poisk"?>
@@ -78,8 +80,7 @@ function filterTable($query)
         </fieldset>
     
     </div>
-    </div>
-</form>
+    </form>
 
 
 </body>
